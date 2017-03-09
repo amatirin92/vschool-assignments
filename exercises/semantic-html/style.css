@@ -1,0 +1,10 @@
+.parent-container{
+  border: solid 6px black;
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+    font-size: 20px;
+    margin: auto;
+    list-style-type: none;
+}

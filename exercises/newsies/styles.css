@@ -1,0 +1,38 @@
+.leftp {
+    float: left;
+    width: 33%;
+}
+
+.centerp {
+    display: inline-block;
+    width: 33%;
+}
+
+.rightp {
+    float: right;
+    width: 33%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    background-color: beige;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    float: left;
+}
+
+div {
+    float: left;
+}
+
+.bottomp {
+    display: inline-block;
+    width: 33%;
+}

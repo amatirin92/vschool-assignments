@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Super;
+    src: url(SuperMario256.ttf);
+}
+
+* {
+    font-family: Super;
+}
+
+.firstrow {
+    background-color: #FED909;
+    height: 150px;
+}
+
+h1 {
+    font-size: 100px;
+    margin-left: 90px;
+}
+
+.mainrow {
+    background-color: #EB2124;
+    height: 300px;
+}
+
+.thirdrow {
+    background-color: white;
+    height: 200px;
+}
+.footerrow{
+    background-color: #FED909;
+    height: 100px;
+   
+}
+
+maindes {
+
+    height: 201px;
+    width: 200px;
+}
+
+p {
+    font-family: 'Arial';
+    font-size: 30px; 
+}

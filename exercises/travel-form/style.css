@@ -1,0 +1,10 @@
+* {
+    text-align:center;
+}
+
+.wholebox {
+    border: 1px solid black;
+    display: flex;
+    
+    color: darkorange;
+}

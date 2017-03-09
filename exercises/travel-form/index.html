@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Travel Form</title>
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+   <div class="wholebox">
+   <div><h1> Traveling Abroad</h1></div>
+   
+    <form id="form1">
+        <div class="row">
+            <div class="col-3"> First Name:
+                <input type="text" name="fname"> </div>
+            <div class="col-3"> Last Name:
+                <input type="text" name="lname"> </div>
+            <div class="col-3"> Age:
+                <input type="number" name="age" maxlength="2" max="100"> </div>
+            <div class="col-3"> <p> Gender:
+                <br> Female
+                <input type="radio" name="gender" value="female">
+                <br> Male
+                <input type="radio" name="gender" value="male"> </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-3"><p>Where you going?
+                <select id="List">
+                    <option value="Berlin">Berlin</option>
+                       <option value="Paris">Paris</option>
+                       <option value="Venice">Venice</option>
+                        </select>
+                </p>
+            </div>
+            <div class="col-3"> 
+            
+            <p>
+              Dietary Restrictions? <br>
+                <input type = "checkbox" name="foods"> Kosher
+                <input type = "checkbox" name="foods"> Vegetarian
+                <input type = "checkbox" name="foods"> Vegan
+            </p>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <button type="button" id="button">Submit</button>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+    </div>
+
+</html>

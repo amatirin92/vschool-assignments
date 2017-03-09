@@ -1,0 +1,20 @@
+
+* {
+    font-family: 'Playfair Display', serif;
+}
+.add {
+    background-color: orangered;
+    width: 60%;
+    height: 100px;
+}
+
+.subtract {
+    background-color: red;
+    width: 60%;
+    height: 100px;
+}
+.multiply {
+    background-color: pink;
+    width: 60%;
+    height: 100px;
+}

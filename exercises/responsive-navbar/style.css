@@ -1,0 +1,45 @@
+body {
+    color: #FFF;
+    
+}
+
+.container {
+    background-image:url("./img/background.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+   
+}
+
+.social {
+    height: 30px;
+    float: right;
+    padding-right: 5px;
+}
+.mobile-view {
+    display: none;
+}
+nav.desktop-view ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.banner {
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+@media screen and (max-width: 875px) {
+    nav.desktop-view {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    nav.mobile-view {
+        display:block;
+    }
+}

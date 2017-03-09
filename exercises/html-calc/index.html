@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+
+<head>HTML Calculator
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <script src="main.js"></script>
+    
+    </head>
+
+<body>
+    <div class = "calculator">
+    <h1> HTML CALCULATOR</h1>
+    <div class="add">
+        <input type="text" id="add1"> +
+        <input type="text" id="add2">
+        <button type = "button" onclick="doMath()">Add them</button> <p id="add"> Answer: </p>
+    </div>
+    <div class="subtract">
+        <input type="text" id="sub1">  -
+        <input type="text" id="sub2">
+        <button type = "button" onclick="doSub()">Subtract them</button> <p id="sub"> Answer: </p>
+    </div>
+    <div class="multiply">
+        <input type="text" id="mult1" min="1" max="5"> X
+        <input type="text" id="mult2" min="1" max="5">
+        <button type = "button" onclick="doMult()">Multiply them</button> <p id="mult"> Answer: </p>
+    </div>
+    </div>
+</body>
+
+</html>
