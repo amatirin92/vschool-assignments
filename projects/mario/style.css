@@ -2,16 +2,22 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
 }
 
 img {
     width: 100px;
 }
 
-* {
-background-color: 85C691;
+.default {
+    background-color: 85C691;
     font-family: 'Ubuntu', sans-serif;
     
+}
+
+.new {
+    background-color: 00302F;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {

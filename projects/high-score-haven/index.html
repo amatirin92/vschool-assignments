@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>High Score Haven</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+    <div class="form">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <center>
+                    <form id="highscorehaven">
+                        <div class="row">
+                            
+                            <h1> High Score Haven</h1>
+                             Name:
+                                <input type="text" id="name" class="form-control" required> 
+                        </div>
+                        <div class="row">
+                                <br> Game:
+                                <input type="text" id="game" name="game" class="form-control" required> 
+                        </div>
+                        <div class="row">
+                               
+                                <br> Date high score was set:
+                                <input type="date" id="date" value="2017-03-15" class="form-control" required>
+                                
+                        </div>
+                        <div class="row">
+                                <br> High Score:
+                                <input type="text" id="score" maxlength=4 class="form-control" required> 
+                        </div>
+                        <div class="row">
+                                <br> Would you like to talk crap?: <br>
+                                <input type="radio" name="choice" id="cbox1" value="Yes" required>
+                                <label for="cbox1">Yes</label>
+                                <input type="radio" name="choice" id="cbox2" value="No">
+                            <label for="cbox2">No</label>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <br>
+                                <input id="btn" type="submit" value="Submit" class="btn btn-default"> </div>
+                        </div>
+                </center>
+                </form>
+            </div>
+            <div class="row">
+                    <table class="table test">
+                        <th> Name</th>
+                        <th> Game</th>
+                        <th> Date of High Score</th>
+                        <th>High Score</th>
+                        <th> Crap talking</th>
+                        <tr id="location-row"> </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
+</html>

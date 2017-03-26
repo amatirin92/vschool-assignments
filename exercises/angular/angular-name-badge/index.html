@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> </head>
+
+<body ng-controller="mainCtrl">
+    <div class="container container-fluid test col-lg-6">
+        <form name="badge" novalidate>
+            <div class="form-group">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <input required ng-model="newPerson.name" type="text" class="form-control" placeholder="First Name"> </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" ng-model='newPerson.lName' class="form-control" aria-describedby="emailHelp" placeholder="Last Name"> </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6" ng-class="{'has-error':badge.email.$invalid && badge.email.$touched}">
+                        <input required type="email" name="email" ng-model='newPerson.email' class="form-control" placeholder="Email">
+                        <p ng-show="badge.email.$invalid && badge.email.$touched" class="help-block"> Email is required! </p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" ng-model="newPerson.birthPlace" class="form-control" id="placeofbirth" placeholder="Place Of Birth"> </div>
+                </div>
+                <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="text" ng-model="newPerson.favFood" class="form-control" placeholder="Favorite Food"> </div>
+                <div class="form-group col-md-6">
+                    <input class="form-control" type="tel" ng-model="newPerson.phone" type="tel" placeholder="1-(951)-555-5555"> </div>
+                    </div>
+                    <div class="row">
+                <div class="form-group col-md-12">
+                    <textarea ng-model="newPerson.aboutYourself" class="form-control" id="exampleTextarea" rows="4" placeholder="Tell us about yourself :)"></textarea>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-6 col-lg-offset-9">
+                    <button ng-click="logInfo(newPerson)" ng-disabled="badge.$invalid" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                    </div>
+        </form>
+        </div>
+        <div class="test container container-fluid" ng-show="person">
+            <header>Badge</header>
+            <p>Name: {{person.name}} {{person.lName}} </p>
+            <p>Email: {{person.email}} </p>
+            <P>Place of Birth: {{person.birthPlace}}</P>
+            <p>Favorite Food: {{person.favFood}}</p>
+            <p> Phone Number: {{person.phone}} </p>
+            <textarea class="form-control">{{person.aboutYourself}}</textarea>
+
+        </div>
+        </div>
+        
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

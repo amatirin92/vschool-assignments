@@ -1,0 +1,1 @@
+The goal in the exercise is to use Angular to create a simple website using the ngmodel and two way data bound elements to make real time updates to the page as a user types in input.

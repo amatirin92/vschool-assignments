@@ -1,0 +1,48 @@
+{
+	"appetizers": [{
+		"name": "Nachos",
+		"ingredients": ["chips", "cheese", "jalepenos"],
+		"description": "A delicious mix of cheese, chips and jalapenos"
+	}, {
+		"name": "Chili Fries",
+		"ingredients": ["chili", "melted cheese", "fries"],
+		"description": "Fries with melted cheese and homemade chili"
+	}],
+	"cold sandwiches": [{
+		"name": "BLT",
+		"ingredients": ["bacon", "lettuce", "tomato"],
+		"description": "Bacon, lettuce and tomato on your choice of bread with mayonnaise or mustard"
+	}, {
+		"name": "Turkey sub",
+		"ingredients": ["Turkey", "lettuce", "cucumber"],
+		"description": "A turkey sub with lettuce and cucumber and choice of sauces and bread"
+	}],
+	"hot sandwiches": [{
+		"name": "Philly cheesesteak",
+		"ingredients": ["steak", "cheese", "peppers"],
+		"description": "A classic Philly cheesesteak on choice of bread"
+	}, {
+		"name": "Pastrami Hero",
+		"ingredients": ["Pastrami", "bread"],
+		"description": "Footlong pastrami on rye bread"
+	}],
+	"desserts": [{
+		"name": "New York Cheesecake",
+		"ingredients": ["milk", "eggs", "cream cheese"],
+		"description": "Classic New York Cheesecake with a modern twist"
+	}, {
+		"name": "Ice Cream Sundae",
+		"ingredients": ["vanilla ice cream", "banana", "cherry"],
+		"description": "Classic ice cream sundae for your after meal enjoyment"
+	}],
+	"drinks": [{
+		"name": "Sprite",
+		"ingredients": ["Carbonated water", "sugar"],
+		"description": "A refreshing, bubbly drink to enjoy with your meal"
+	}, {
+		"name": "Green Tea",
+		"ingredients": ["green tea", "pomegranate"],
+		"description": "Energizing green tea to kick off your day"
+	}]
+
+}

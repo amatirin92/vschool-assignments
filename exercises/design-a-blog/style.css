@@ -53,4 +53,6 @@ span {
 }
     li:hover {
         background-color: #111;
+        transition-property: background-color;
+        transition-duration: 0.5s;
     }

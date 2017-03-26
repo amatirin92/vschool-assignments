@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="practice">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="mainController"> first Name:
+    <input ng-model="newPerson.firstName" /> last Name:
+    <input ng-model="newPerson.lastName" />
+    <button ng-click="submit(newPerson)">Submit</button>
+    <div ng-show="person"> Your name is: {{person.firstName}} {{person.lastName}} </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

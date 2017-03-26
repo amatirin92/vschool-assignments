@@ -1,0 +1,29 @@
+
+table {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    margin:auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.form {
+    padding: 30px;
+    
+}
+body {
+    background-color: aquamarine;
+    justify-content: center;
+    color: maroon;
+}
+
+h1 {
+    color: cornflowerblue;
+}

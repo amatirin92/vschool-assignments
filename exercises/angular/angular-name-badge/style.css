@@ -1,0 +1,26 @@
+.outer {
+    margin: 10px;   
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+input {
+  
+    
+}
+
+.test {
+    border: 1px solid black;
+    border-radius: 30px;
+    
+}
+
+header{
+    background-color: grey;
+}
+
+.ng-invalid.ng-touched {
+    border-color: red;
+}

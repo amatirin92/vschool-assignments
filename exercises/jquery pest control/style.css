@@ -1,0 +1,37 @@
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+img {
+    width: 100px;
+}
+
+.default {
+    background-color: 85C691;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.new {
+    background-color: 00302F;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    color: 0009FF;
+    margin-bottom: 5%;
+    font-size: 60px;
+}
+
+.first {
+    color: B20CE8;
+}
+.second {
+    color: E8690C;
+}
+.third {
+    color: FFC60D;
+}

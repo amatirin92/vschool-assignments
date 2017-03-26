@@ -1,0 +1,30 @@
+* {
+    text-align: center;
+}
+.itemDone {
+    text-decoration: line-through;
+}
+
+.wholelist {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: grey;
+    padding-bottom: 30px;
+}
+
+button:hover {
+    background-color: white;
+}
+.checked {
+    font-size: 25px;
+}
+
+.eachOne {
+    
+}
+
+/*
+img {
+    height: 60px;
+    width: 60px
+}*/

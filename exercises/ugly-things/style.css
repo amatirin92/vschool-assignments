@@ -1,0 +1,14 @@
+.header {
+    height: 200px;
+    background-color: dodgerblue;
+/*
+    margin-left: 200px;
+    margin-right: 200px;
+*/
+}
+
+.inputs{
+    position: relative;
+    left: %;
+    margin-top: 3%;
+}

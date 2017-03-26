@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+<body ng-controller="mainCtrl">
+    <div class="well well-lg col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-2">
+        <p>Your name is {{coffee}}</p>
+        <input type="text" ng-model="coffee"> </div>
+    <div class="well well-lg col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-2">
+        <p>You are {{tea}} years old</p>
+        <input type="text" ng-model="tea"> </div>
+    <div class="well well-lg col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-2">
+        <p>You live in {{soda}}.</p>
+        <input type="text" ng-model="soda"> </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+The goal of the exercise is to use Angular 
