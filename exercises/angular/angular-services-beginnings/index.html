@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <script src='https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js'></script>
+        <script src='app.js'></script>
+        <script src='service.js'></script>
+    
+    
+</head>
+<body ng-controller='mainController'>
+
+    <input type="text" placeholder='favorite place' ng-model='placeName'>
+    <button ng-click='addPlace(placeName)'> Add!</button>
+    
+    <div ng-repeat='item in favoritePlace track by $index'>
+       {{item}} <button ng-click='removePlace($index)'> X</button>
+       
+        
+    </div>
+    
+    {{test}}
+    
+    
+</body>
+</html>

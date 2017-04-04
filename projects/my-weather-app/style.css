@@ -1,0 +1,21 @@
+.background{
+    background: url(editedbackground.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center; 
+    font-family: 'Work Sans', sans-serif;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+

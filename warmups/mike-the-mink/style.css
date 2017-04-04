@@ -1,0 +1,45 @@
+/*font-family: 'Inconsolata', monospace;*/
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.parallax {
+  background-image:url('https://www.travelalaska.com/~/media/Images/TravelAlaska/Content/HomePage/ChugachMountains.jpg');
+/*
+    background-size: cover;
+    height: 100vh;
+*/
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+    opacity: 0.62;
+}
+
+
+ #flag {
+    height: 400px;
+    width: 500px;
+     margin-bottom: auto;
+    
+}
+
+.navbar {
+    margin-bottom: 0;
+    
+}
+.splitbox {
+    height: 1000px;
+    background-color:darkgrey;
+    font-size:36px; 
+    padding-top: 1%;
+    
+}
+
+img {
+    height: 200px;
+    width: 100px;
+}
+

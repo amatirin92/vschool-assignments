@@ -17,20 +17,28 @@
                 <div class="col-lg-6 col-lg-offset-3 inputs">
                     <div class="row">
                         <div class="col-lg-4">
-                            <input placeholder="title"> </div>
+                            <input ng-model='newItem.title' placeholder="title"> </div>
                         <div class="col-lg-4">
-                            <input placeholder="URL"> </div>
+                            <input ng-model='newItem.url' placeholder="URL"> </div>
                         <div class="col-lg-4">
-                            <input placeholder="omg it's so ugly because.."> </div>
+                            <input ng-model='newItem.description' placeholder="omg it's so ugly because.."> </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <button>Submit</button>
+                <div class="col-lg-12 col-lg-offset-5">
+                    <button ng-click="newObject(newItem)">Submit</button>
                 </div>
             </div>
         </div>
+        <div ng-repeat='item in items track by $index'>
+            <div class='row'>
+                <div class="col-lg-12 col-lg-offset-6"> {{item.title}} </div>
+                <div class="col-lg-12" "col-lg-offset-6"> <img ng-src="{{item.url}}"> </div>
+                <div class="col-lg-12 col-lg-offset-6"> {{item.description}} </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

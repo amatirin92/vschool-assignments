@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <script src='app.js'></script>
+    <script src='blueService.js'></script>
+    <script src='redService.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  <div ng-controller='blueService'>
+     Score: 
+      <button class='btn btn-primary'>BLUE BUTTON</button>
+  </div>
+-->
+   <div ng-controller='mainController'>
+     
+
+   
+   <p>Score: {{red}} </p>
+    <button ng-click='redChange()'>Red</button>
+    
+    <p>Score: {{blue}}</p>
+    <button ng-click='blueChange()'>Blue</button>
+    
+    </div>
+</body>
+</html>

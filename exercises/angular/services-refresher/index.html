@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+    <script src='app.js'></script>
+    <script src='service.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body ng-controller='mainController'>
+    <div class='row'>
+        <div class='header col-lg-6  col-lg-offset-3'>
+            <div class='container container-fluid input-group row justify-content-center'>
+                <div class='col-lg-3'>
+                    <input type="text" placeholder='title' class='form-control' ng-model='newItem.title'> </div>
+                <div class='col-lg-3'>
+                    <input type="url" placeholder="image URL" class='form-control'
+                    ng-model='newItem.photo'> </div>
+                <div class='col-lg-3'>
+                    <input type="text" placeholder='description' ng-model='newItem.description' class='form-control'> </div> <span class='input-group-btn'>
+    <button type='button' class='submit btn btn-secondary' ng-click='add(newItem)'>Submit</button>
+    </span> </div>
+        </div>
+    </div> 
+    <div class='row'>
+    <div class='col-lg-6'>
+    <div ng-repeat='item in cartoonArray track by $index'>
+        <div>{{item.title}}</div>
+        <div>{{item.description}}</div>
+        <img src='{{item.photo}}'></div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -6,41 +6,42 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
-    <script src="main.js"></script>
 </head>
 
 <body ng-controller='mainController'>
-  <div class="row">
-   <div class="wholelist col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-2">
-   
-   <h1>Todo List</h1>
-    <div class="eachOne"ng-repeat="todo in todoList track by $index">
-<!--       Display the todo-->
-       
-       <span class="checked">&#10003;</span><input type="checkbox" ng-model="done">
-        <p ng-class="{'itemDone': done}">{{todo.title}} || {{todo.description}}
-        {{todo.price}}||
-         
-         
-        <button type="submit" class="btn btn-sm" ng-click="deleteTodo(todo, $index)"><span class="glyphicon glyphicon-remove"></span></button>
-         </p>
-         
-        <img ng-src="{{todo.imgUrl}}">
-        
+    <div class="row">
+        <div class="wholelist col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-2">
+            <h1>Todo List</h1>
+            <div class="eachOne" ng-repeat="todo in todoList track by $index">
+                <!--       Display the todo-->
+                <div ng-hide='editing'> <span class="checked">&#10003;</span>
+                    <input type="checkbox" ng-model="todo.completed" ng-click='editTodo(todo)'>
+                    <p ng-class="{'itemDone': todo.completed}">{{todo.title}} || {{todo.description}} || ${{todo.price}} ||</p> 
+                        <button type="submit" class="btn btn-sm" ng-click="deleteTodo($index)"><span class="glyphicon glyphicon-remove"></span></button>
+                        <button type='button' class="btn btn-sm" ng-click="editing = !editing"> Edit</button>
+                </div>
+                <img ng-src="{{todo.imgUrl}}">
+                <div ng-show='editing'>
+                    <input type="text" class="form-control" placeholder="title" ng-model="todo.title">
+                    <input type="text" class="form-control" placeholder="description" ng-model="todo.description">
+                    <input type="text" class="form-control" placeholder="image url" ng-model="todo.imgUrl">
+                    <input type="text" class="form-control" placeholder="price" ng-model="todo.price">
+                    <button type='button' class="btn btn-sm" ng-click='editTodo(todo); editing = !editing'>Submit Changes</button>
+                </div>
+            </div>
+            <!--    Post a NEW todo-->
+            <input type="text" class="form-control" placeholder="title" ng-model="newTodo.title">
+            <input type="text" class="form-control" placeholder="description" ng-model="newTodo.description">
+            <input type="text" class="form-control" placeholder="image url" ng-model="newTodo.imgUrl">
+            <input type="text" class="form-control" placeholder="price" ng-model="newTodo.price">
+            <div>
+                <button type="submit" class="btn btn-secondary" ng-click="postTodo(newTodo)">Post!</button>
+            </div>
+        </div>
     </div>
-    
-<!--    Post a NEW todo-->
-    <input type="text" class="form-control" placeholder="title" ng-model="newTodo.title">
-    <input type="text" class="form-control" placeholder="description" ng-model="newTodo.description">
-    <input type="text" class="form-control" placeholder="image url" ng-model="newTodo.imgUrl">
-    <input type="text" class="form-control" placeholder="price" ng-model="newTodo.price">
-    
-    <div>
-    <button type="submit" class="btn btn-secondary" ng-click="postTodo(newTodo)">Post!</button>
-    </div>
-</div>
-    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src='service.js'></script>
 </body>
 
 </html>

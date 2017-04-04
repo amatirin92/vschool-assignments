@@ -1,0 +1,1 @@
+In this exercise, we practiced our problem solving skill by creating a function that would pass in a string and check if it was a palindrome. To do this, we remove punctuation, white space, and lowercase the string

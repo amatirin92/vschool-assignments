@@ -1,0 +1,11 @@
+            <body ng-class={{}}>
+               <div class='col-lg-12 col-offset-lg-12' ng-class="{'weather rain' : isWet, 'weather snow' : isSnow}">
+                <h1>Welcome</h1>
+                <h1><input type='text' ng-model='cityName'>
+                <button type='button' ng-click='submit(cityName)'> Click me!</button></h1>
+                <h1><i class='{{weatherIcon}}'></i>
+                </h1>
+                <h1>{{currentTemp}} </h1>
+                <h1>{{description}}</h1>
+                </div>
+</body>

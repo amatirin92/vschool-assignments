@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
     <script src="main.js"></script>
+    <script src='service.js'></script>
 </head>
 <body ng-controller="mainController">
     <div class = "header">
@@ -17,10 +18,10 @@
     
     <div class = "container container-fluid box">
       <div class="row">
-          <div class="photobox container-fluid col-lg-4  col-md-3 col-sm-3"  ng-repeat="items in hitList">
-        <img class="photos" ng-src="{{items.image}}">
+          <div class="photobox container-fluid col-lg-4  col-md-3 col-sm-3"  ng-repeat="hit in hitList">
+        <img class="photos" ng-src="{{hit.image}}">
             <br>
-             {{items.name}}
+             {{hit.name}}
               </div>
           </div>
           
