@@ -6,16 +6,123 @@
   background-size: cover;
 }
 
-h1 {
-    font-size: 100px;
-    text-align: center; 
+* {
     font-family: 'Work Sans', sans-serif;
+}
+.btn {
+    font-size: 20px;
+    font-display: auto;
+    margin-top: 20px;
+    border-color: white;
+}
+.btn:hover {
+    background-color: wheat;
+    border-color: wheat;
+}
+.btn:active {
+    background-color: wheat;
+}
+.btn:visited{
+    background-color: wheat;
+}
+
+.weather-results {
+     text-align: center;
+}
+.input-result{
+    margin-top: 6%;
+    margin-bottom: 29vh;
+}
+.forecast-result{
+    margin-top: 2%;
+    margin-bottom: 29vh;
+}
+i.forecast-result {
+    font-size: 40px
+}
+
+i.input-result {
+    font-size: 300px;
+    padding-bottom: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 130px;
+    padding-bottom: 10px;
 }
 
 input {
   border: 0;
   outline: 0;
   background: transparent;
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid black;
+    font-size: 45px;
+    text-align: center;
+  
+}
+
+.navbar-nav{
+    font-size: 20px;
+    
+}
+
+
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('editedbackground.png');
+  background-position: center center;
+  background-origin: content-box;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+/* Now the same background, but with brightness filters*/
+.lightning{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('editedbackground.png');
+  background-position: center center;
+  background-origin: content-box;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: brightness(3);
+  filter: brightness(3);
+  -o-filter: brightness(3);
+  -moz-filter: brightness(3);
+  z-index: -1;
+}
+
+/*Now just a opacity animation*/
+.flashit{
+-webkit-animation: flash ease-out 7s infinite;
+-moz-animation: flash ease-out 7s infinite;
+animation: flash ease-out 7s infinite;
+animation-delay: 2s;
+}
+
+@-webkit-keyframes flash {
+	from { opacity: 0; } 
+  92% { opacity: 0; }
+	93% { opacity: 0.6; }
+  94% { opacity: 0.2; }
+  96% { opacity: 0.9; } 
+	to { opacity: 0; }
+}
+
+@keyframes flash {
+	from { opacity: 0; } 
+    92% { opacity: 0; }
+	93% { opacity: 0.6; }
+    94% { opacity: 0.2; }
+    96% { opacity: 1; } 
+	to { opacity: 0; }
 }
 

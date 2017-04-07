@@ -1,0 +1,12 @@
+<div class='row'>
+    <div class='col-lg-12 col-offset-lg-12 col-md-6 weather-results'>
+        <h1>Sunrise/Sunset Times</h1>
+        <input type='text' placeholder='city/zipcode' ng-model='cityName'>
+        <div>
+            <button class='btn btn-default' type='button' ng-click='submit(cityName)'> Weather me!</button>
+        </div>
+        <div class='forecast-result'>
+            <h2><i class='{{sunsetIcon}}'> </i>{{sunsetTime |  date: 'h:mm a'}}</h2>
+            <h2><i class='{{sunriseIcon}}'>  </i>{{sunriseTime | date: 'h:mm a'}} </h2> </div>
+    </div>
+</div>
