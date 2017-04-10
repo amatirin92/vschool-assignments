@@ -1,0 +1,30 @@
+body {
+    background-image:url(https://i.ytimg.com/vi/voWpbz1De_M/maxresdefault.jpg);
+}
+
+
+.post {
+    width: 200px;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin: auto;
+    
+}
+.post input.ng-invalid.ng-touched {
+    background-color: red;
+}
+.post input.ng-valid.ng-touched {
+    border-color: blue;
+}
+
+.list {
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.editing {
+    width: 300px;
+}

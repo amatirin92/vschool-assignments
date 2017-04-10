@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+
+<body ng-controller='mainController' class='container container-fluid' ng-cloak>
+   
+    <div class='post'>
+        <h4>Post new bounty </h4>
+        <form novalidate class='form'>
+        <input type="text" class="form-control" placeholder="first name" ng-model="newBounty['first name']" required>
+        <input type="text" class="form-control" placeholder="last name" ng-model="newBounty['last name']" required>
+        <input type="text" class="form-control" placeholder="bounty amount" ng-model="newBounty['bounty amount']" required>
+        <h4>Type</h4>
+        <h4>
+        <input type='radio' value='jedi' ng-model="newBounty['type']">Jedi
+        <br>
+        <input type='radio' value='sith' ng-model="newBounty['type']">Sith
+        </h4>
+        <h4>Living?</h4>
+        <h4>
+        <input type="radio" ng-value="false" ng-model="newBounty['living']"> No
+        <br>
+        <input type="radio" ng-value="true" ng-model="newBounty['living']"> Yes
+        </h4>
+        <br>
+        <button type="submit" class="btn btn-secondary" ng-click="post(newBounty)">Post!</button>
+    </form>
+    </div>d
+    <div ng-repeat='item in bounties' class='list'>
+        <div ng-hide='editing'>
+            <h2>Name: {{item['first name']}} {{item['last name']}}</h2>
+            <h3>Living: {{item['living']}}</h3>
+            <h3>Type: {{item['type']}}</h3>
+            <h3>Bounty Amount: {{item['bounty amount'] | currency:"$"}}</h3>
+            <p>
+                <button type='button' class="btn btn-secondary" ng-click='editing = !editing'> Edit </button>
+                <button type='button' class="btn btn-secondary" ng-click='delete(item.id)'> X </button>
+            </p>
+        </div>
+        <div ng-show='editing' class='editing'>
+            <input type="text" class="form-control" placeholder="title" ng-model="item['first name']">
+            <input type="text" class="form-control" placeholder="description" ng-model="item['last name']">
+            <input type="text" class="form-control" placeholder="type" ng-model="item['type']">
+            <input type="text" class="form-control" placeholder="amount" ng-model="item['bounty amount']">
+            <button type='button' class="btn btn-sm" ng-click='put(item); editing = !editing'>Submit Changes</button>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+    <script src='app.js'></script>
+</body>
+
+</html>

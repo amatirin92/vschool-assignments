@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css"> </head>
 
 <body ng-controller='mainController'>
     <div class="row">
@@ -16,10 +15,10 @@
                 <!--       Display the todo-->
                 <div ng-hide='editing'> <span class="checked">&#10003;</span>
                     <input type="checkbox" ng-model="todo.completed" ng-click='editTodo(todo)'>
-                    <p ng-class="{'itemDone': todo.completed}">{{todo.title}} || {{todo.description}} || ${{todo.price}} ||</p> 
-                        <button type="submit" class="btn btn-sm" ng-click="deleteTodo($index)"><span class="glyphicon glyphicon-remove"></span></button>
-                        <button type='button' class="btn btn-sm" ng-click="editing = !editing"> Edit</button>
-                </div>
+                    <p ng-class="{'itemDone': todo.completed}">{{todo.title}} || {{todo.description}} || ${{todo.price}} ||</p>
+                    <button type="submit" class="btn btn-sm" ng-click="deleteTodo($index)"><span class="glyphicon glyphicon-remove"></span></button>
+                    <button type='button' class="btn btn-sm" ng-click="editing = !editing"> Edit</button>
+                </div> 
                 <img ng-src="{{todo.imgUrl}}">
                 <div ng-show='editing'>
                     <input type="text" class="form-control" placeholder="title" ng-model="todo.title">
@@ -39,7 +38,7 @@
             </div>
         </div>
     </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="main.js"></script>
     <script src='service.js'></script>
 </body>
