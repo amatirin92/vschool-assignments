@@ -15,7 +15,7 @@ body {
     background-color: red;
 }
 .post input.ng-valid.ng-touched {
-    border-color: blue;
+    border-color: skyblue;
 }
 
 .list {

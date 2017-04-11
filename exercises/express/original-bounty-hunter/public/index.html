@@ -10,27 +10,30 @@
 <body ng-controller='mainController' class='container container-fluid' ng-cloak>
    
     <div class='post'>
+        <form novalidate class='form' name='form'>
         <h4>Post new bounty </h4>
-        <form novalidate class='form'>
-        <input type="text" class="form-control" placeholder="first name" ng-model="newBounty['first name']" required>
-        <input type="text" class="form-control" placeholder="last name" ng-model="newBounty['last name']" required>
-        <input type="text" class="form-control" placeholder="bounty amount" ng-model="newBounty['bounty amount']" required>
+        <input type="text" name='fname' class="form-control" placeholder="first name" ng-model="newBounty['first name']" required>
+        <span ng-show='form.fname.$touched && form.fname.$invalid'>Please enter a valid name.</span>
+        <input type="text" name='lname' class="form-control" placeholder="last name" ng-model="newBounty['last name']" required>
+        <span ng-show='form.lname.$touched && form.lname.$invalid'>Please enter a valid name.</span>
+        <input type="number" name='amount' class="form-control" placeholder="bounty amount" ng-model="newBounty['bounty amount']" min='0' integer required>
+        <span ng-show='form.amount.$touched && form.amount.$invalid'>The amount isn't valid.</span>
         <h4>Type</h4>
         <h4>
-        <input type='radio' value='jedi' ng-model="newBounty['type']">Jedi
+        <input type='radio' name='species' value='jedi' ng-model="newBounty['type']"> Jedi
         <br>
-        <input type='radio' value='sith' ng-model="newBounty['type']">Sith
+        <input type='radio' name='species' value='sith' ng-model="newBounty['type']"> Sith
         </h4>
         <h4>Living?</h4>
         <h4>
-        <input type="radio" ng-value="false" ng-model="newBounty['living']"> No
+        <input type="radio" name='living 'ng-value="false" ng-model="newBounty['living']"> No
         <br>
-        <input type="radio" ng-value="true" ng-model="newBounty['living']"> Yes
+        <input type="radio" name='living' ng-value="true" ng-model="newBounty['living']"> Yes
         </h4>
         <br>
-        <button type="submit" class="btn btn-secondary" ng-click="post(newBounty)">Post!</button>
+        <button ng-disabled='form.$invalid'type="submit" class="btn btn-secondary" ng-click="post(newBounty)">Post!</button>
     </form>
-    </div>d
+    </div>
     <div ng-repeat='item in bounties' class='list'>
         <div ng-hide='editing'>
             <h2>Name: {{item['first name']}} {{item['last name']}}</h2>
