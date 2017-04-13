@@ -20,21 +20,21 @@
         <span ng-show='form.amount.$touched && form.amount.$invalid'>The amount isn't valid.</span>
         <h4>Type</h4>
         <h4>
-        <input type='radio' name='species' value='jedi' ng-model="newBounty['type']"> Jedi
+        <input type='radio' name='species' value='jedi' ng-model="newBounty['type']" required> Jedi
         <br>
-        <input type='radio' name='species' value='sith' ng-model="newBounty['type']"> Sith
+        <input type='radio' name='species' value='sith' ng-model="newBounty['type']" required> Sith
         </h4>
         <h4>Living?</h4>
         <h4>
-        <input type="radio" name='living 'ng-value="false" ng-model="newBounty['living']"> No
+        <input type="radio" name='living 'ng-value="false" ng-model="newBounty['living']" required> No
         <br>
-        <input type="radio" name='living' ng-value="true" ng-model="newBounty['living']"> Yes
+        <input type="radio" name='living' ng-value="true" ng-model="newBounty['living']" required> Yes
         </h4>
         <br>
         <button ng-disabled='form.$invalid'type="submit" class="btn btn-secondary" ng-click="post(newBounty)">Post!</button>
     </form>
     </div>
-    <div ng-repeat='item in bounties' class='list'>
+    <div ng-repeat="item in bounties | orderBy:'-'" class='list'>
         <div ng-hide='editing'>
             <h2>Name: {{item['first name']}} {{item['last name']}}</h2>
             <h3>Living: {{item['living']}}</h3>

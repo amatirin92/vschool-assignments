@@ -37,7 +37,7 @@ app.service('httpService', function ($http) {
     this.delete = function (id) {
         return $http.delete('/bounty/' + id).then(function (response) {
             console.log('Your item was successfully deleted');
-            return response.data;
+             return response.data;
         })
     }
     this.put = function (item) {
