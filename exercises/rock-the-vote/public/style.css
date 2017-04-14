@@ -1,0 +1,43 @@
+.parallax {
+    background-image: url(css/vote.jpg);
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.8;
+    font-family: 'Concert One', cursive;
+    
+}
+
+/*
+.whole {
+    text-align: center;
+    padding: 70px 0;
+}
+*/
+
+.issuebox {
+    font-family: 'Open Sans';
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.odd a {
+    color: red;
+}
+.odd a:hover {
+    color: blue;
+}
+.even a {
+    color: blue;
+}
+.even a:hover {
+    color: red;
+}
+
+p {
+    display: block;
+}
