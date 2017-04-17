@@ -1,5 +1,6 @@
 # Don't track content of these folders
 node_modules/  
+.DS_Store
 
 *.com
 *.class
@@ -18,6 +19,7 @@ node_modules/
 *.rar
 *.tar
 *.zip
+<<<<<<< HEAD
 .idea/ 
 node_modules/
 .idea/
@@ -29,3 +31,5 @@ React/
 assignments/
 
 
+=======
+>>>>>>> 60f437b5ab4f45c2fcbd7a1848acbd6f44273cc6
