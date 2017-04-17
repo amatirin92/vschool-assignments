@@ -8,58 +8,60 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.css">
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body ng-controller='mainController'>
-    <div class='parallax'></div>
-        <div class='row'>
-            <div class='col-lg-2 col-lg-offset-6'>
-               <button class='btn btn-default btn-lg' ng-click='newpost = !newpost'> POST </button>
-               <div ng-show='newpost' class='newpost'>
-                <input type='text' class="form-control" ng-model='newPost.title'>
-                <input type='text' class="form-control" ng-model='newPost.description'>
-                <button class='btn btn-default btn-lg' type='button' ng-click='post(newPost)'>Post!</button>
-                </div>
-            </div>
-            </div>
-    <div ng-repeat="item in votes | orderBy:'-totalVotes'" ng-class-odd="'odd'" ng-class-even="'even'">
-        <button ng-click='delete(item)'>X</button>
-        <div class='row'>
-            <div class='col-lg-4 col-lg-offset-4'>
-                <div class='issuebox'>
-                    <h1>{{item.title}}</h1>
-                    <h4>{{item.description}}</h4>
-                    <h5>Total Votes: {{item.totalVotes}}</h5>
-                    <h5><a href='' ng-click='upvote(item)'>
-                        <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></a>
-                        {{item.upvotes}}</h5>
-                    <h5><a href='' ng-click='downvote(item)'>
-                        <i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></a>
-                        {{item.downvotes}} </h5>
-                    <div>
-                        <h5><a href="" ng-click='commentbox = !commentbox'><i
+<div class='parallax'></div>
+<div class='row'>
+    <div class='col-lg-4 col-lg-offset-4 post'>
+        <button class='btn btn-default btn-lg' ng-click='newpost = !newpost'> POST</button>
+        <div ng-show='newpost' class='newpost'>
+            <input type='text' placeholder="Issue" class="form-control" ng-model='newPost.title'>
+            <input type='text' placeholder="Description" class="form-control" ng-model='newPost.description'>
+            <button class='btn btn-default btn-lg' type='button' ng-click='post(newPost)'>Post!</button>
+        </div>
+    </div>
+</div>
+<div ng-repeat="item in votes | orderBy:'-totalVotes'" ng-class-odd="'odd'" ng-class-even="'even'">
+    <!--<button ng-click='delete(item)'>X</button>-->
+    <div class='row'>
+        <div class='col-lg-4 col-lg-offset-4'>
+            <div class='issuebox'>
+                <h1>{{item.title}}</h1>
+                <h4>{{item.description}}</h4>
+                <h5>Total Votes: {{item.totalVotes}}</h5>
+                <h5><a href='' ng-click='upvote(item)'>
+                    <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></a>
+                    {{item.upvotes}}</h5>
+                <h5><a href='' ng-click='downvote(item)'>
+                    <i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></a>
+                    {{item.downvotes}} </h5>
+                <div>
+                    <h5><a href="" ng-click='commentbox = !commentbox'><i
                             class="fa fa-comment fa-2x"
                             aria-hidden="true"></i></a>
-                            </h5>
-                        <div ng-repeat="comment in item.userComments" class="animated slideInDown commentbox">
-                            <div ng-show='commentbox' class=' animated slideInDown commentbox'> "{{comment}}" </div>
-                        </div>
+                    </h5>
+                    <div ng-repeat="comment in item.userComments" class="animated slideInDown commentbox">
+                        <div ng-show='commentbox' class=' animated slideInDown commentbox'> "{{comment}}"</div>
                     </div>
-                    <div class='row'>
-                        <div class='col-lg-4 col-lg-offset-4'>
-                            <input class='form-control' ng-model="newitem">
-                            <button class='btn btn-danger' ng-click="put(newitem, item); commentbox = !commentbox">Submit</button>
-                        </div>
+                </div>
+                <div class='row'>
+                    <div class='col-lg-4 col-lg-offset-4'>
+                        <input class='form-control' ng-model="newitem">
+                        <button class='btn btn-danger' ng-click="put(newitem, item); commentbox = !commentbox">Submit
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src='https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js'></script>
-    <script src='app.js'></script>
-    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src='https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js'></script>
+<script src='app.js'></script>
+</div>
 </body>
 
 </html>

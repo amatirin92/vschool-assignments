@@ -1,3 +1,4 @@
+
 .parallax {
     background-image: url(css/vote.jpg);
     background-repeat: no-repeat;
@@ -10,6 +11,10 @@
     
 }
 
+.post {
+    text-align: center;
+    margin-bottom: 3px;
+}
 /*
 .whole {
     text-align: center;
@@ -23,6 +28,7 @@
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+    margin-bottom: 8%;
 }
 
 .odd a {
