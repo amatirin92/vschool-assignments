@@ -1,7 +1,7 @@
-# Don't track content of these folders
+Don't track content of these folders
 node_modules/  
 .DS_Store
-.idea/ 
+.idea/
 
 *.com
 *.class
