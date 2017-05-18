@@ -22,6 +22,7 @@
         font-style: italic;
         letter-spacing: 5px;
         border: 2px solid black;
+        z-index: -1;
     }
     
     img {
