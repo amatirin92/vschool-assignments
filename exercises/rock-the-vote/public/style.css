@@ -10,6 +10,24 @@
     font-family: 'Concert One', cursive;
     
 }
+@media only screen and (min-width: 768px) {
+    .parallax {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .parallax {
+        height: 60vh;
+    }
+}
+
+/*@media only screen and (max-width: 767px) and (orientation: portrait) {*/
+    /*!* portrait phones *!*/
+/*}*/
+
+
 
 .post {
     text-align: center;

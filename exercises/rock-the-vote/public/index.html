@@ -24,7 +24,7 @@
     </div>
 </div>
 <div ng-repeat="item in votes | orderBy:'-totalVotes'" ng-class-odd="'odd'" ng-class-even="'even'">
-    <!--<button ng-click='delete(item)'>X</button>-->
+    <button ng-click='delete(item)'>X</button>
     <div class='row'>
         <div class='col-lg-4 col-lg-offset-4'>
             <div class='issuebox'>
@@ -42,7 +42,7 @@
                             class="fa fa-comment fa-2x"
                             aria-hidden="true"></i></a>
                     </h5>
-                    <div ng-repeat="comment in item.userComments" class="animated slideInDown commentbox">
+                    <div ng-repeat="comment in item.userComments track by $index" class="animated slideInDown commentbox">
                         <div ng-show='commentbox' class=' animated slideInDown commentbox'> "{{comment}}"</div>
                     </div>
                 </div>
